@@ -1,7 +1,10 @@
 package net.cbgmdias.braunmod;
 
 import com.mojang.logging.LogUtils;
+import net.cbgmdias.braunmod.item.ModCreativeModTabs;
+import net.cbgmdias.braunmod.item.ModItems;
 import net.minecraft.client.Minecraft;
+import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
@@ -26,6 +29,10 @@ public class BraunMod {
     public BraunMod() {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
+        ModCreativeModTabs.register(modEventBus);
+
+        ModItems.register(modEventBus);
+
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
 
@@ -44,6 +51,10 @@ public class BraunMod {
 
     // Add the example block item to the building blocks tab
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
+        if (event.getTabKey() == CreativeModeTabs.INGREDIENTS){
+            event.accept(ModItems.BRAUNITE);
+            event.accept(ModItems.RAW_BRAUNITE);
+        }
     }
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call
