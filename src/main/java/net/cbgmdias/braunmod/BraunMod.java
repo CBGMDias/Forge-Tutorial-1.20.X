@@ -1,6 +1,7 @@
 package net.cbgmdias.braunmod;
 
 import com.mojang.logging.LogUtils;
+import net.cbgmdias.braunmod.block.ModBlocks;
 import net.cbgmdias.braunmod.item.ModCreativeModTabs;
 import net.cbgmdias.braunmod.item.ModItems;
 import net.minecraft.client.Minecraft;
@@ -32,6 +33,7 @@ public class BraunMod {
         ModCreativeModTabs.register(modEventBus);
 
         ModItems.register(modEventBus);
+        ModBlocks.register(modEventBus);
 
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);

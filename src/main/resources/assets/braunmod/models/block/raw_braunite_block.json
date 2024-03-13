@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "braunmod:block/raw_braunite_block"
+  }
+}
