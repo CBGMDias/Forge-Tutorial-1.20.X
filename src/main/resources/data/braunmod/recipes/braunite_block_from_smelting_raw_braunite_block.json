@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 1000,
+  "experience": 45.0,
+  "ingredient": {
+    "item": "braunmod:raw_braunite_block"
+  },
+  "result": "braunmod:braunite_block"
+}

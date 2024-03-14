@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients":[
+    {
+      "item": "braunmod:raw_braunite_block"
+    }
+  ],
+  "result": {
+    "item": "braunmod:raw_braunite",
+    "count": 9
+  }
+}

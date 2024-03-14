@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "###",
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "braunmod:braunite"
+    }
+  },
+  "result": {
+    "item": "braunmod:braunite_block"
+  }
+}
