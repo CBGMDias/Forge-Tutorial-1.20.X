@@ -2,10 +2,12 @@ package net.cbgmdias.braunmod.block;
 
 import net.cbgmdias.braunmod.BraunMod;
 import net.cbgmdias.braunmod.item.ModItems;
+import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.DropExperienceBlock;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -20,13 +22,16 @@ public class ModBlocks {
             DeferredRegister.create(ForgeRegistries.BLOCKS, BraunMod.MOD_ID);
 
     public static final RegistryObject<Block> BRAUNITE_BLOCK = registerBlock("braunite_block",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.NETHERITE_BLOCK).sound(SoundType.AMETHYST)));
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.NETHERITE_BLOCK).strength(15.0F, 1200F)
+                    .sound(SoundType.AMETHYST)));
     public static final RegistryObject<Block> RAW_BRAUNITE_BLOCK = registerBlock("raw_braunite_block",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.ANCIENT_DEBRIS)));
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.ANCIENT_DEBRIS).strength(5.0F, 1200F)));
     public static final RegistryObject<Block> BRAUNITE_ORE = registerBlock("braunite_ore",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.ANCIENT_DEBRIS)));
+            () -> new DropExperienceBlock(BlockBehaviour.Properties.copy(Blocks.STONE)
+                    .strength(10.0F, 1200.0F).requiresCorrectToolForDrops(), UniformInt.of(7,13)));
     public static final RegistryObject<Block> DEEPSLATE_BRAUNITE_ORE = registerBlock("deepslate_braunite_ore",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.ANCIENT_DEBRIS)));
+            () -> new DropExperienceBlock(BlockBehaviour.Properties.copy(Blocks.DEEPSLATE)
+                    .strength(12.0F, 1200.0F).requiresCorrectToolForDrops(), UniformInt.of(8,14)));
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
