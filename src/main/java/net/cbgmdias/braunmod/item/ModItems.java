@@ -14,13 +14,17 @@ public class ModItems {
 
 public static final RegistryObject<Item> BRAUNITE = ITEMS.register("braunite",
         () -> new Item(new Item.Properties()));
-    public static final RegistryObject<Item> RAW_BRAUNITE = ITEMS.register("raw_braunite",
+
+public static final RegistryObject<Item> RAW_BRAUNITE = ITEMS.register("raw_braunite",
             () -> new Item(new Item.Properties()));
 
-    public static final RegistryObject<Item> METAL_DETECTOR = ITEMS.register("metal_detector",
+public static final RegistryObject<Item> METAL_DETECTOR = ITEMS.register("metal_detector",
             () -> new MetalDetectorItem(new Item.Properties().durability(500)));
 
-    public static void register(IEventBus eventBus){
+    public static final RegistryObject<Item> BANANA = ITEMS.register("banana",
+            () -> new Item(new Item.Properties().food(ModFoods.BANANA)));
+
+public static void register(IEventBus eventBus){
         ITEMS.register(eventBus);
     }
 }
