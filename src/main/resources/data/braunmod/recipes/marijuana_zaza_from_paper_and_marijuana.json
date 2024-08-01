@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "M",
+    "P"
+  ],
+  "key": {
+    "M": {
+      "item": "braunmod:marijuana"
+    },
+    "P": {
+      "item": "minecraft:paper"
+    }
+  },
+  "result": {
+    "item": "braunmod:marijuana_zaza"
+  }
+}
