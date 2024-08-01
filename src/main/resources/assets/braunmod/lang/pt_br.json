@@ -1,0 +1,18 @@
+{
+  "item.braunmod.braunite": "Braunite",
+  "item.braunmod.raw_braunite": "Braunite Bruta",
+
+  "item.braunmod.metal_detector": "Detector de Metais",
+
+  "item.braunmod.banana": "Banana",
+  "item.braunmod.marijuana": "Planta da Boa",
+  "item.braunmod.marijuana_zaza": "Zaza",
+
+  "block.braunmod.braunite_block": "Bloco de Braunite",
+  "block.braunmod.raw_braunite_block": "Bloco de Braunite Bruta",
+
+  "block.braunmod.braunite_ore": "Minério de Braunite",
+  "block.braunmod.deepslate_braunite_ore": "Minério de Braunite de Ardósia",
+
+  "creativetab.braun_tab": "BraunModCaraio"
+}

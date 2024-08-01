@@ -21,8 +21,14 @@ public static final RegistryObject<Item> RAW_BRAUNITE = ITEMS.register("raw_brau
 public static final RegistryObject<Item> METAL_DETECTOR = ITEMS.register("metal_detector",
             () -> new MetalDetectorItem(new Item.Properties().durability(500)));
 
-    public static final RegistryObject<Item> BANANA = ITEMS.register("banana",
+public static final RegistryObject<Item> BANANA = ITEMS.register("banana",
             () -> new Item(new Item.Properties().food(ModFoods.BANANA)));
+
+public static final RegistryObject<Item> MARIJUANA = ITEMS.register("marijuana",
+            () -> new Item(new Item.Properties().food(ModFoods.MARIJUANA)));
+
+public static final RegistryObject<Item> MARIJUANA_ZAZA = ITEMS.register("marijuana_zaza",
+            () -> new Item(new Item.Properties().food(ModFoods.MARIJUANA_ZAZA)));
 
 public static void register(IEventBus eventBus){
         ITEMS.register(eventBus);
