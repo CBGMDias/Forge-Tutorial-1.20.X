@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients":[
+    {
+      "item": "braunmod:pig_heart"
+    },
+    {
+      "item": "minecraft:egg"
+    }
+  ],
+  "result": {
+    "item": "minecraft:pig_spawn_egg",
+    "count": 1
+  }
+}

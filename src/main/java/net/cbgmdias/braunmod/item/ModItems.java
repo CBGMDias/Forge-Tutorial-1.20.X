@@ -34,6 +34,15 @@ public class ModItems {
     public static final RegistryObject<Item> DRY_MARIJUANA = ITEMS.register("dry_marijuana",
             () -> new FuelItem(new Item.Properties(), 40));
 
+    public static final RegistryObject<Item> COW_HEART = ITEMS.register("cow_heart",
+            () -> new Item(new Item.Properties()));
+
+    public static final RegistryObject<Item> SHEEP_HEART = ITEMS.register("sheep_heart",
+            () -> new Item(new Item.Properties()));
+
+    public static final RegistryObject<Item> PIG_HEART = ITEMS.register("pig_heart",
+            () -> new Item(new Item.Properties()));
+
 public static void register(IEventBus eventBus){
         ITEMS.register(eventBus);
     }
